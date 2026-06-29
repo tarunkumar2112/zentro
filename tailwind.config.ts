@@ -10,6 +10,12 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        heading: ["var(--font-carter-one)", "system-ui"],
+        body: ["var(--font-blinker)", "sans-serif"],
+        carter: ["var(--font-carter-one)", "system-ui"],
+        blinker: ["var(--font-blinker)", "sans-serif"],
+      },
       colors: {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
@@ -24,6 +30,7 @@ export default {
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
+          hover: "hsl(var(--primary-hover))",
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
@@ -40,6 +47,14 @@ export default {
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
           foreground: "hsl(var(--destructive-foreground))",
+        },
+        success: {
+          DEFAULT: "hsl(var(--success))",
+          foreground: "hsl(var(--success-foreground))",
+        },
+        warning: {
+          DEFAULT: "hsl(var(--warning))",
+          foreground: "hsl(var(--warning-foreground))",
         },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

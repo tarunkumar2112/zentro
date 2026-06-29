@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
-import { Geist } from "next/font/google";
+import { Carter_One, Blinker } from "next/font/google";
 import { ThemeProvider } from "next-themes";
+import { PageTransition } from "@/components/page-transition";
 import "./globals.css";
 
 const defaultUrl = process.env.VERCEL_URL
@@ -9,12 +10,20 @@ const defaultUrl = process.env.VERCEL_URL
 
 export const metadata: Metadata = {
   metadataBase: new URL(defaultUrl),
-  title: "Next.js and Supabase Starter Kit",
-  description: "The fastest way to build apps with Next.js and Supabase",
+  title: "ZENTRO - Modern E-commerce",
+  description: "Shop the latest trends in fashion and lifestyle at ZENTRO",
 };
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const carterOne = Carter_One({
+  weight: "400",
+  variable: "--font-carter-one",
+  display: "swap",
+  subsets: ["latin"],
+});
+
+const blinker = Blinker({
+  weight: ["100", "200", "300", "400", "600", "700", "800", "900"],
+  variable: "--font-blinker",
   display: "swap",
   subsets: ["latin"],
 });
@@ -26,14 +35,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${geistSans.className} antialiased`}>
+      <body className={`${blinker.variable} ${carterOne.variable} ${blinker.className} antialiased`}>
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
-          enableSystem
+          defaultTheme="dark"
+          enableSystem={false}
           disableTransitionOnChange
         >
-          {children}
+          <PageTransition>{children}</PageTransition>
         </ThemeProvider>
       </body>
     </html>
