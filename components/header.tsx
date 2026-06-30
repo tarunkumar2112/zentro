@@ -117,7 +117,7 @@ export function Header() {
 
             {/* Account Button - Hidden on mobile */}
             <Link
-              href="/account"
+              href="/dashboard"
               className="hidden lg:block p-2 hover:bg-card rounded-md transition-colors"
               aria-label="Account"
             >

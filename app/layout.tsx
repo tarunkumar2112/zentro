@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Carter_One, Blinker } from "next/font/google";
 import { ThemeProvider } from "next-themes";
 import { PageTransition } from "@/components/page-transition";
+import { TooltipProvider } from "@/components/ui/tooltip";
 import "./globals.css";
 
 const defaultUrl = process.env.VERCEL_URL
@@ -42,7 +43,9 @@ export default function RootLayout({
           enableSystem={false}
           disableTransitionOnChange
         >
-          <PageTransition>{children}</PageTransition>
+          <TooltipProvider>
+            <PageTransition>{children}</PageTransition>
+          </TooltipProvider>
         </ThemeProvider>
       </body>
     </html>

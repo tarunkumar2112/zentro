@@ -64,7 +64,7 @@ export function CollectionsSection() {
   return (
     <section className="w-full bg-background pt-12 lg:pt-16">
       {/* Section Header */}
-      <div className="container mx-auto px-4 pb-8 lg:pb-12">
+      <div className="container mx-auto px-4 pb-8 lg:pb-12 text-center">
         <h2 className="font-heading text-4xl lg:text-6xl">
           Shop by Collection
         </h2>
